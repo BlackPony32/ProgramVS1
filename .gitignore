@@ -1,0 +1,10 @@
+*.json
+*.txt
+*.png
+*.jpg
+*.qrc
+*.env
+img/*
+build/*
+dist/*
+Image_resource_rc.py

@@ -25,13 +25,17 @@ class _new_Watched_Series(MyWindowFormat):
         self.move(frame_geometry.topLeft())
 
     def initialize(self):
-        self.setStyleSheet(
+        #код,що додає фоновий градієнт лише до головного вікна
+        self.central_widget = QWidget(self)  # Create the central widget
+        self.setCentralWidget(self.central_widget)
+        self.central_widget.setStyleSheet("background-color: qlineargradient(x1: 0, x2: 1, stop: 0 #1f1d05, stop: 1 #80091b);")
+        """self.setStyleSheet(
             '''
             QMainWindow {
                 background-image: url(":/images/light_cinema2.png");
             }
             '''
-        )
+        )"""
         # Set the background image using a style sheet
 
         # _____________Основні кнопки для переходу по сторінках і збереження даних в базу___________

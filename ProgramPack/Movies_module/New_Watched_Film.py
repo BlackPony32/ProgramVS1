@@ -28,7 +28,7 @@ class _new_Watched_Film(MyWindowFormat):
         #код,що додає фоновий градієнт лише до головного вікна
         self.central_widget = QWidget(self)  # Create the central widget
         self.setCentralWidget(self.central_widget)
-        self.central_widget.setStyleSheet("background-color: qlineargradient(x1: 0,y1: 0,x2: 1,y2: 1,stop: 0 #1A1C20, stop: 0.25 #34495e,stop: 1 #4B5C77,);box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); border-radius: 5px;")
+        self.central_widget.setStyleSheet("background-color: qlineargradient(x1: 0, x2: 1, stop: 0 #46312e, stop: 1 #afa28a);")
 
         #self.setStyleSheet("background-color: qlineargradient(x1: 0, x2: 1, stop: 0 #250002, stop: 1 #7f0014);")
         """self.setStyleSheet(

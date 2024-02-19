@@ -2,19 +2,14 @@
 <RCC>
     <qresource prefix="images">
         <file alias="popcorn4.png">ProgramPack/img/popcorn4.png</file>
-        <file alias="popcorn3.png">ProgramPack/img/popcorn3.png</file>
-        <file alias="popcorn2.png">ProgramPack/img/popcorn2.png</file>
-        <file alias="popcorn1.png">ProgramPack/img/popcorn1.png</file>
         <file alias="light_cinema2.png">ProgramPack/img/light_cinema2.png</file>
-        <file alias="light_cinema3.png">ProgramPack/img/light_cinema3.png</file>
-        <file alias="light_cinema4.png">ProgramPack/img/light_cinema4.png</file>
         <file alias="MovieIcon.jpg">ProgramPack/img/MovieIcon.jpg</file>
         <file alias="Down_arrow.png">ProgramPack/img/Down_arrow.png</file>
         <file alias="cinema1.png">ProgramPack/img/cinema1.png</file>
         <file alias="cinema2.png">ProgramPack/img/cinema2.png</file>
     </qresource>
     <qresource prefix="jsons">
-        <!-- Pyrcc5 Image_resource.qrc -o Image_resource_rc.py -->
+        <!-- Pyrcc5 Image_resource.qrc -o Image_resource_rendered.py -->
         <!-- Other resource files... -->
         <file alias="Filmanecdotes.json">ProgramPack/my_data/Filmanecdotes.json</file>
         <file alias="Genres.json">ProgramPack/my_data/Genres.json</file>
