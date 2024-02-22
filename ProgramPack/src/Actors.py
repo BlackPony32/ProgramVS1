@@ -11,10 +11,10 @@ from PyQt5.QtWidgets import QWidget, QVBoxLayout, QGridLayout, QLabel, QCheckBox
 
 
 class ActorsApp(QWidget):
-    def __init__(self, genres):
+    def __init__(self, actors):
         super().__init__()
-        self.genres = genres
-        self.selected_genres = []
+        self.actors = actors
+        self.selected_actors = []
 
         self.init_ui()
 
@@ -64,9 +64,9 @@ class ActorsApp(QWidget):
         self.checkboxes = []
         row = 0
         col = 0
-        for genre in self.genres:
-            checkbox = QCheckBox(genre)
-            checkbox.stateChanged.connect(self.update_selected_genres)
+        for actors in self.actors:
+            checkbox = QCheckBox(actors)
+            checkbox.stateChanged.connect(self.update_selected_actors)
             self.checkboxes.append(checkbox)
             grid_layout.addWidget(checkbox, row, col)
             col += 1
@@ -77,11 +77,11 @@ class ActorsApp(QWidget):
         layout.addLayout(grid_layout)
 
         button = _MyButton("Підтвердити")
-        button.clicked.connect(self.show_selected_genres)
+        button.clicked.connect(self.show_selected_actors)
         layout.addWidget(button)
 
-        self.selected_genres_text_edit = QPlainTextEdit()
-        self.selected_genres_text_edit.setStyleSheet(
+        self.selected_actors_text_edit = QPlainTextEdit()
+        self.selected_actors_text_edit.setStyleSheet(
             '''
             QPlainTextEdit {
                 background-color: #FDFD96;  /* Світло-жовтий фон */
@@ -96,32 +96,32 @@ class ActorsApp(QWidget):
             }
             '''
         )
-        layout.addWidget(self.selected_genres_text_edit)
+        layout.addWidget(self.selected_actors_text_edit)
 
         self.add_button = _MyButton("Додати")
-        self.add_button.clicked.connect(self.add_selected_genres)
+        self.add_button.clicked.connect(self.add_selected_actors)
         layout.addWidget(self.add_button)
 
 
         self.setLayout(layout)
 
-    def update_selected_genres(self, state):
+    def update_selected_actors(self, state):
         checkbox = self.sender()
-        genre = checkbox.text()
+        actors = checkbox.text()
 
         if state == 2:
-            if genre not in self.selected_genres:
-                self.selected_genres.append(genre)
+            if actors not in self.selected_actors:
+                self.selected_actors.append(actors)
         else:
-            if genre in self.selected_genres:
-                self.selected_genres.remove(genre)
+            if actors in self.selected_actors:
+                self.selected_actors.remove(actors)
 
-    def show_selected_genres(self):
-        genres_str = ", ".join(self.selected_genres)
-        self.selected_genres_text_edit.setPlainText(genres_str)
+    def show_selected_actors(self):
+        actors_str = ", ".join(self.selected_actors)
+        self.selected_actors_text_edit.setPlainText(actors_str)
 
-    def add_selected_genres(self):
-        text_to_save = self.selected_genres_text_edit.toPlainText()
+    def add_selected_actors(self):
+        text_to_save = self.selected_actors_text_edit.toPlainText()
 
         # Отримати абсолютний шлях до каталогу проекту
         project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))

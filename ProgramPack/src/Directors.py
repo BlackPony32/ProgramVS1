@@ -9,10 +9,10 @@ from PyQt5.QtWidgets import QWidget, QVBoxLayout, QGridLayout, QLabel, QCheckBox
 from ProgramPack.src.MyButton import _MyButton
 
 class DirectorsApp(QWidget):
-    def __init__(self, genres):
+    def __init__(self, directors):
         super().__init__()
-        self.genres = genres
-        self.selected_genres = []
+        self.directors = directors
+        self.selected_directors = []
 
         self.init_ui()
 
@@ -62,9 +62,9 @@ class DirectorsApp(QWidget):
         self.checkboxes = []
         row = 0
         col = 0
-        for genre in self.genres:
-            checkbox = QCheckBox(genre)
-            checkbox.stateChanged.connect(self.update_selected_genres)
+        for directors in self.directors:
+            checkbox = QCheckBox(directors)
+            checkbox.stateChanged.connect(self.update_selected_directors)
             self.checkboxes.append(checkbox)
             grid_layout.addWidget(checkbox, row, col)
             col += 1
@@ -75,11 +75,11 @@ class DirectorsApp(QWidget):
         layout.addLayout(grid_layout)
 
         button = _MyButton("Підтвердити")
-        button.clicked.connect(self.show_selected_genres)
+        button.clicked.connect(self.show_selected_directors)
         layout.addWidget(button)
 
-        self.selected_genres_text_edit = QPlainTextEdit()
-        self.selected_genres_text_edit.setStyleSheet(
+        self.selected_directors_text_edit = QPlainTextEdit()
+        self.selected_directors_text_edit.setStyleSheet(
             '''
             QPlainTextEdit {
                 background-color: #FDFD96;  /* Світло-жовтий фон */
@@ -94,32 +94,32 @@ class DirectorsApp(QWidget):
             }
             '''
         )
-        layout.addWidget(self.selected_genres_text_edit)
+        layout.addWidget(self.selected_directors_text_edit)
 
         self.add_button = _MyButton("Додати")
-        self.add_button.clicked.connect(self.add_selected_genres)
+        self.add_button.clicked.connect(self.add_selected_directors)
         layout.addWidget(self.add_button)
 
 
         self.setLayout(layout)
 
-    def update_selected_genres(self, state):
+    def update_selected_directors(self, state):
         checkbox = self.sender()
-        genre = checkbox.text()
+        directors = checkbox.text()
 
         if state == 2:
-            if genre not in self.selected_genres:
-                self.selected_genres.append(genre)
+            if directors not in self.selected_directors:
+                self.selected_directors.append(directors)
         else:
-            if genre in self.selected_genres:
-                self.selected_genres.remove(genre)
+            if directors in self.selected_directors:
+                self.selected_directors.remove(directors)
 
-    def show_selected_genres(self):
-        genres_str = ", ".join(self.selected_genres)
-        self.selected_genres_text_edit.setPlainText(genres_str)
+    def show_selected_directors(self):
+        directors_str = ", ".join(self.selected_directors)
+        self.selected_directors_text_edit.setPlainText(directors_str)
 
-    def add_selected_genres(self):
-        text_to_save = self.selected_genres_text_edit.toPlainText()
+    def add_selected_directors(self):
+        text_to_save = self.selected_directors_text_edit.toPlainText()
 
         # Get the absolute path to the project's directory
         project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
