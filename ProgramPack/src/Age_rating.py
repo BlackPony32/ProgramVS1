@@ -108,9 +108,7 @@ class Age_MovieRatingApp(QMainWindow):
         text_to_save = self.selected_genres_text_edit.toPlainText()
 
     # Get the absolute path to the project's directory
-        project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        file_path = os.path.join(project_dir,"ProgramPack", "movie_age_rating.txt")
-
+        file_path = os.path.join(os.getcwd(),"my_data","movie_age_rating.txt")
     # Check if the file exists, create it if not
         if not os.path.exists(file_path):
             with open(file_path, 'w', encoding='utf-8') as file:
@@ -127,8 +125,7 @@ class Age_MovieRatingApp(QMainWindow):
             QMessageBox.critical(self, 'Error', f'Error saving text:\n{str(e)}')
             
     def save_to_file(self):
-        project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        file_path = os.path.join(project_dir, "movie_age_rating.txt")
+        file_path = os.path.join(os.getcwd(),"my_data","movie_age_rating.txt")
         self.update_description()
         # Open the file for writing and save the text
         try:

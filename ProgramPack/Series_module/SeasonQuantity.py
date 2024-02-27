@@ -92,8 +92,7 @@ class SeriesSeasonSelection(QWidget):
         animation.start()
 
     def save_to_file(self):
-        project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        file_path = os.path.join(project_dir, "Series_QuantitySeason.txt")
+        file_path = os.path.join(os.getcwd(),"my_data","Series_QuantitySeason.txt")
 
         # Open the file for writing and save the text
         try:

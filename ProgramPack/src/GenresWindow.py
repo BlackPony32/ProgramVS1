@@ -85,8 +85,8 @@ class GenreSelectionApp(QWidget):
         text_to_save = self.selected_genres_text_edit.toPlainText()
 
     # Get the absolute path to the project's directory
-        project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        file_path = os.path.join(project_dir,"ProgramPack", "dataGenres.txt")
+        file_path = os.path.join(os.getcwd(),"my_data","dataGenres.txt")
+
 
     # Check if the file exists, create it if not
         if not os.path.exists(file_path):

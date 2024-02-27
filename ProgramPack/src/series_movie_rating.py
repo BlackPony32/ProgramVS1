@@ -85,8 +85,7 @@ class MovieRatingApp(QMainWindow):
         self.current_result = f"Ви обрали оцінку: {button.text()}\n{comment}"
 
     def save_to_file(self):
-        project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        file_path = os.path.join(project_dir, "movie_rating_result.txt")
+        file_path = os.path.join(os.getcwd(),"my_data","movie_rating_result.txt")
 
         # Open the file for writing and save the text
         try:

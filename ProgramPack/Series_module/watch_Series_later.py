@@ -161,7 +161,7 @@ class _new_Series_later(MyWindowFormat):
         self.labelCount.move(850, 305)
 
         self.file_name40 = "Series_QuantitySeason.txt"
-        self.file_path40 = os.path.join(os.getcwd(),"ProgramPack", self.file_name40)
+        self.file_path40 = os.path.join(os.getcwd(),"my_data", self.file_name40)
 
         self.file_watcher40 = QFileSystemWatcher()
         self.file_watcher40.addPath(self.file_path40)

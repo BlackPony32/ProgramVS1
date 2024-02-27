@@ -124,9 +124,9 @@ class ActorsApp(QWidget):
         text_to_save = self.selected_actors_text_edit.toPlainText()
 
         # Отримати абсолютний шлях до каталогу проекту
-        project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        file_path = os.path.join(project_dir, "dataActors.txt")
-
+        #project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+        #ile_path = os.path.join(project_dir, "dataActors.txt")
+        file_path = os.path.join(os.getcwd(),"my_data","dataActors.txt")
         # Відкрийте файл для запису і збережіть текст
         try:
             with open(file_path, 'w', encoding='utf-8') as file:

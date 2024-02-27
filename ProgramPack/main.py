@@ -27,13 +27,13 @@ if __name__ == "__main__":
             pass
 
     # Очистити всі файли
-    clear_file(os.path.join(os.getcwd(), "ProgramPack", "dataGenres.txt"))
-    clear_file(os.path.join(os.getcwd(), "ProgramPack", "movie_rating_result.txt"))
-    clear_file(os.path.join(os.getcwd(), "ProgramPack", "movie_age_rating.txt"))
-    clear_file(os.path.join(os.getcwd(), "ProgramPack", "Series_QuantitySeason.txt"))
-    clear_file(os.path.join(os.getcwd(), "ProgramPack", "dataDirectors.txt"))
-    clear_file(os.path.join(os.getcwd(), "ProgramPack", "dataActors.txt"))
-    clear_file(os.path.join(os.getcwd(), "ProgramPack", "Series_status.txt"))
+    clear_file(os.path.join(os.getcwd(), "my_data", "dataGenres.txt"))
+    clear_file(os.path.join(os.getcwd(), "my_data", "movie_rating_result.txt"))
+    clear_file(os.path.join(os.getcwd(), "my_data", "movie_age_rating.txt"))
+    clear_file(os.path.join(os.getcwd(), "my_data", "Series_QuantitySeason.txt"))
+    clear_file(os.path.join(os.getcwd(), "my_data", "dataDirectors.txt"))
+    clear_file(os.path.join(os.getcwd(), "my_data", "dataActors.txt"))
+    clear_file(os.path.join(os.getcwd(), "my_data", "Series_status.txt"))
 
     #Запуск програми
     app = QApplication(sys.argv)

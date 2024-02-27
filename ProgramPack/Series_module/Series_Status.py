@@ -96,8 +96,7 @@ class _SeriesStatus(QMainWindow):
         self.description_label.setText(self.description)
 
     def save_to_file(self):
-        project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        file_path = os.path.join(project_dir, "Series_status.txt")
+        file_path = os.path.join(os.getcwd(),"my_data","Series_status.txt")
         self.update_description()
         # Open the file for writing and save the text
         try:

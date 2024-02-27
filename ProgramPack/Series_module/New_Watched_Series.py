@@ -158,7 +158,7 @@ class _new_Watched_Series(MyWindowFormat):
         self.labelCount.move(850, 85)
 
         self.file_name40 = "Series_QuantitySeason.txt"
-        self.file_path40 = os.path.join(os.getcwd(),"ProgramPack", self.file_name40)
+        self.file_path40 = os.path.join(os.getcwd(),"my_data", self.file_name40)
 
         self.file_watcher40 = QFileSystemWatcher()
         self.file_watcher40.addPath(self.file_path40)
@@ -182,7 +182,7 @@ class _new_Watched_Series(MyWindowFormat):
         self.line_edit7 = QPlainTextEdit(self)
         self.line_edit7.setPlaceholderText("Запишіть статус серіалу самостійно або оберіть з доступних")
         self.file_name3 = "Series_Status.txt"
-        self.file_path3 = os.path.join(os.getcwd(),"ProgramPack", self.file_name3)
+        self.file_path3 = os.path.join(os.getcwd(),"my_data", self.file_name3)
 
         self.file_watcher3 = QFileSystemWatcher()
         self.file_watcher3.addPath(self.file_path3)
@@ -226,7 +226,7 @@ class _new_Watched_Series(MyWindowFormat):
         self.line_edit8.setPlaceholderText(
             "Оберіть режисера зі списку або введіть самостійно (по замовчуванню не вказано)")
         self.file_name4 = "dataDirectors.txt"
-        self.file_path4 = os.path.join(os.getcwd(),"ProgramPack", self.file_name4)
+        self.file_path4 = os.path.join(os.getcwd(),"my_data", self.file_name4)
 
         self.file_watcher4 = QFileSystemWatcher()
         self.file_watcher4.addPath(self.file_path4)
@@ -270,7 +270,7 @@ class _new_Watched_Series(MyWindowFormat):
         self.line_edit9.setPlaceholderText(
             "Оберіть акторів зі списку або введіть самостійно (по замовчуванню не вказано)")
         self.file_name5 = "dataActors.txt"
-        self.file_path5 = os.path.join(os.getcwd(),"ProgramPack", self.file_name5)
+        self.file_path5 = os.path.join(os.getcwd(),"my_data", self.file_name5)
 
         self.file_watcher5 = QFileSystemWatcher()
         self.file_watcher5.addPath(self.file_path5)
@@ -314,7 +314,7 @@ class _new_Watched_Series(MyWindowFormat):
         self.line_edit4 = QPlainTextEdit(self)
         self.line_edit4.setPlaceholderText("Запишіть жанр серіалу самостійно або оберіть з доступних")
         self.file_name = "dataGenres.txt"
-        self.file_path = os.path.join(os.getcwd(),"ProgramPack", self.file_name)
+        self.file_path = os.path.join(os.getcwd(),"my_data", self.file_name)
 
         self.file_watcher = QFileSystemWatcher()
         self.file_watcher.addPath(self.file_path)
@@ -358,7 +358,7 @@ class _new_Watched_Series(MyWindowFormat):
         self.line_edit5.setPlaceholderText(
             "Запишіть оцінку серіала самостійно або скористайтесь запропонованою системою")
         self.file_name1 = "movie_rating_result.txt"
-        self.file_path1 = os.path.join(os.getcwd(),"ProgramPack", self.file_name1)
+        self.file_path1 = os.path.join(os.getcwd(),"my_data", self.file_name1)
 
         self.file_watcher1 = QFileSystemWatcher()
         self.file_watcher1.addPath(self.file_path1)
@@ -401,7 +401,7 @@ class _new_Watched_Series(MyWindowFormat):
         self.line_edit6.setPlaceholderText(
             "Введіть доповнення до вікового рейтингу або оберіть доступну")
         self.file_name2 = "movie_age_rating.txt"
-        self.file_path2 = os.path.join(os.getcwd(),"ProgramPack", self.file_name2)
+        self.file_path2 = os.path.join(os.getcwd(),"my_data", self.file_name2)
 
         self.file_watcher2 = QFileSystemWatcher()
         self.file_watcher2.addPath(self.file_path2)

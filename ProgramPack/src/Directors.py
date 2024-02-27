@@ -122,8 +122,9 @@ class DirectorsApp(QWidget):
         text_to_save = self.selected_directors_text_edit.toPlainText()
 
         # Get the absolute path to the project's directory
-        project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
-        file_path = os.path.join(project_dir, "dataDirectors.txt")
+        #project_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
+        #file_path = os.path.join(project_dir, "dataDirectors.txt") old format
+        file_path = os.path.join(os.getcwd(),"my_data","dataDirectors.txt")
 
         # Open the file for writing and save the text
         try:

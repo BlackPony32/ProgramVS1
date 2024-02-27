@@ -214,7 +214,7 @@ class _new_Watched_Film(MyWindowFormat):
         label4.move(45, 345)
 
         self.file_name = "dataGenres.txt"
-        self.file_path = os.path.join(os.getcwd(),"ProgramPack", self.file_name)
+        self.file_path = os.path.join(os.getcwd(),"my_data", self.file_name)
         self.file_watcher = QFileSystemWatcher()
         self.file_watcher.addPath(self.file_path)
         self.file_watcher.fileChanged.connect(self.update_line_edit4)
@@ -259,7 +259,7 @@ class _new_Watched_Film(MyWindowFormat):
         self.line_edit5 = QPlainTextEdit(self)
         self.line_edit5.setPlaceholderText("Запишіть оцінку фільму самостійно або скористайтесь запропонованою системою")
         self.file_name1 = "movie_rating_result.txt"
-        self.file_path1 = os.path.join(os.getcwd(),"ProgramPack", self.file_name1)
+        self.file_path1 = os.path.join(os.getcwd(),"my_data", self.file_name1)
 
         self.file_watcher1 = QFileSystemWatcher()
         self.file_watcher1.addPath(self.file_path1)
@@ -302,7 +302,7 @@ class _new_Watched_Film(MyWindowFormat):
         self.line_edit6.setPlaceholderText(
             "Введіть доповнення до вікового рейтингу або оберіть доступну")
         self.file_name2 = "movie_age_rating.txt"
-        self.file_path2 = os.path.join(os.getcwd(),"ProgramPack", self.file_name2)
+        self.file_path2 = os.path.join(os.getcwd(),"my_data", self.file_name2)
 
         self.file_watcher2 = QFileSystemWatcher()
         self.file_watcher2.addPath(self.file_path2)
